@@ -10,27 +10,34 @@ console.log("VOLUME = " + VOLUME);
 // bee | 1012
 var input = require('fs').readFileSync('/dev/stdin', 'utf8');
 var lines = input.split('\n');
-
-var A = parseFloat(lines.shift()).toFixed(1);
-var B = parseFloat(lines.shift()).toFixed(1);
-var C = parseFloat(lines.shift()).toFixed(1);
+var A = parseFloat(lines.shift());
+var B = parseFloat(lines.shift());
+var C = parseFloat(lines.shift());
 var pi = 3.14159;
-var TRIANGULO = ((1 / 2) * A * C).toFixed(3);
-var CIRCULO = (pi * C * C).toFixed(3);
-var QUADRADO = (B * B).toFixed(3);
-var RETANGULO = (A * B).toFixed(3);
-const tp = (A+B/2)*C;
-console.log("TRIANGULO: " + TRIANGULO);
-console.log("CIRCULO: " + CIRCULO);
-console.log("QUADRADO: " + QUADRADO);
-console.log("RETANGULO: " + RETANGULO);
-console.log("tp = " + tp);
+
+var tri = ((A * C) / 2).toFixed(3);
+var cir = (pi * C * C).toFixed(3);
+var trap = (((A + B) * C) / 2).toFixed(3);
+var squ = (B * B).toFixed(3);
+var rec = (A * B).toFixed(3);
+
+console.log("TRIANGULO: " + tri);
+console.log("CIRCULO: " + cir);
+console.log("TRAPEZIO: " + trap);
+console.log("QUADRADO: " + squ);
+console.log("RETANGULO: " + rec);
 
 
 // bee | 1013
 
 
 // bee | 1014
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+var X = parseInt(lines.shift());
+var Y = parseFloat(lines.shift());
+var result = (X / Y).toFixed(3);
+console.log(result + " km/l");
 
 
 // bee | 1015
